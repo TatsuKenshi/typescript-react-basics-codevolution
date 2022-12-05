@@ -7,6 +7,9 @@ import Oscar from "./components/Oscar";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
+import LoggedIn from "./components/state/LoggedIn";
+import User from "./components/state/User";
+import User2 from "./components/state/User2";
 
 function App() {
   const personName = {
@@ -44,6 +47,9 @@ function App() {
       <Container
         styles={{ border: "1px solid black", padding: "1rem", margin: "1rem" }}
       />
+      <LoggedIn />
+      <User />
+      <User2 />
     </div>
   );
 }
