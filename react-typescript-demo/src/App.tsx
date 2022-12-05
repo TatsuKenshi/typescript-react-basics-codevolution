@@ -10,6 +10,11 @@ import Container from "./components/Container";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
 import User2 from "./components/state/User2";
+import Counter from "./components/reducer & context/Counter";
+import ThemeContextProvider from "./components/reducer & context/context type inference/ThemeContext";
+import Box from "./components/reducer & context/context type inference/Box";
+import ComponentUser from "./components/reducer & context/context future value/ComponentUser";
+import ComponentUserContextProvider from "./components/reducer & context/context future value/ComponentUserContext";
 
 function App() {
   const personName = {
@@ -20,7 +25,7 @@ function App() {
   const nameList = [
     { first: "Bruce", last: "Wayne" },
     { first: "Clark", last: "Kent" },
-    { first: "Princess", last: "Diana" },
+    { first: "Diana", last: "Prince" },
   ];
 
   return (
@@ -50,6 +55,13 @@ function App() {
       <LoggedIn />
       <User />
       <User2 />
+      <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <ComponentUserContextProvider>
+        <ComponentUser />
+      </ComponentUserContextProvider>
     </div>
   );
 }
