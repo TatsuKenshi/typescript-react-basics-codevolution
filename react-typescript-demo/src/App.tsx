@@ -15,6 +15,9 @@ import ThemeContextProvider from "./components/reducer & context/context type in
 import Box from "./components/reducer & context/context type inference/Box";
 import ComponentUser from "./components/reducer & context/context future value/ComponentUser";
 import ComponentUserContextProvider from "./components/reducer & context/context future value/ComponentUserContext";
+import { ClassCounter } from "./components/class/ClassCounter";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 
 function App() {
   const personName = {
@@ -62,6 +65,8 @@ function App() {
       <ComponentUserContextProvider>
         <ComponentUser />
       </ComponentUserContextProvider>
+      <ClassCounter message="The counter value is " />
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
